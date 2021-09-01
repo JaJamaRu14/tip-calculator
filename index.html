@@ -13,14 +13,81 @@
     />
 
     <title>Frontend Mentor | Tip calculator app</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <main>
-      <h1>Splitter</h1>
-      Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-      person Total / person Reset
+    <header class="app-name"><h1>Splitter</h1></header>
+
+    <main class="container">
+      <div class="row align-items-center justify-content-center">
+        <!-- Input Field starts -->
+        <div class="col-6">
+          <label for="bill">Bill</label>
+          <input type="tel" maxlength="6" id="bill" placeholder="0" />
+
+          <div class="tip-percentage-wrapper">
+            <div class="tip-pecentage-title">Select Tip %</div>
+            <div class="tip-percentage">
+              <button class="btn btn--cyan">5%</button>
+              <button class="btn btn--cyan">10%</button>
+              <button class="btn btn--cyan">15%</button>
+              <button class="btn btn--cyan">25%</button>
+              <button class="btn btn--cyan">50%</button>
+              <button class="btn btn--cyan">Custom</button>
+            </div>
+          </div>
+          <!-- <a href="" class="btn btn--cyan">5%</a>
+              <a href="" class="btn btn--cyan">10%</a>
+              <a href="" class="btn btn--cyan">15%</a>
+              <a href="" class="btn btn--cyan">25%</a>
+              <a href="" class="btn btn--cyan">50%</a>
+              <a href="" class="btn btn--cyan">Custom</a> -->
+
+          <label for="number-of-people">Number of People</label>
+          <p class="warning">Can't be zero</p>
+          <input
+            type="tel"
+            maxlength="2"
+            id="number-of-people"
+            placeholder="0"
+          />
+        </div>
+        <!-- Input Field ends -->
+
+        <!-- Result Field starts -->
+        <div class="col-6">
+          <div class="tip-amount-wrapper">
+            <div class="tip-amount-title">Tip Amount <span>/ person</span></div>
+            <div class="tip-amount">$0.00</div>
+          </div>
+
+          <div class="total-amount-wrapper">
+            <div class="total-amount-title">Total <span>/ person</span></div>
+            <div class="total-amount">$0.00</div>
+          </div>
+
+          <a href="" class="btn btn--cyan">RESET</a>
+          <!-- Result Field ends -->
+        </div>
+      </div>
     </main>
+
+    <!-- JS -->
+    <script src="./js/app.js"></script>
   </body>
 </html>

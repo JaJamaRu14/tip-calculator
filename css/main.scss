@@ -1,3 +1,16 @@
+// base
+@import './base/_reset';
+@import './base/_typography';
+
+// components
+@import './components/_button';
+// utils
+@import './utils/_utilities';
+
 body {
-  background-color: hsl(185, 41%, 84%);
+  background-color: $light-gray-cyan;
+}
+
+.container {
+  background-color: $white;
 }
