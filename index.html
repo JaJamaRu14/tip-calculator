@@ -38,17 +38,17 @@
         <!-- Input Field starts -->
         <div class="col-6">
           <label for="bill">Bill</label>
-          <input type="tel" maxlength="6" id="bill" placeholder="0" />
+          <input type="tel" id="bill" placeholder="0" />
 
           <div class="tip-percentage-wrapper">
             <div class="tip-pecentage-title">Select Tip %</div>
             <div class="tip-percentage">
-              <button class="btn btn--cyan">5%</button>
-              <button class="btn btn--cyan">10%</button>
-              <button class="btn btn--cyan">15%</button>
-              <button class="btn btn--cyan">25%</button>
-              <button class="btn btn--cyan">50%</button>
-              <button class="btn btn--cyan">Custom</button>
+              <button class="btn btn--cyan tip" value="5">5%</button>
+              <button class="btn btn--cyan tip" value="10">10%</button>
+              <button class="btn btn--cyan tip" value="15">15%</button>
+              <button class="btn btn--cyan tip" value="25">25%</button>
+              <button class="btn btn--cyan tip" value="50">50%</button>
+              <button class="btn btn--cyan tip">Custom</button>
             </div>
           </div>
           <!-- <a href="" class="btn btn--cyan">5%</a>
@@ -57,15 +57,16 @@
               <a href="" class="btn btn--cyan">25%</a>
               <a href="" class="btn btn--cyan">50%</a>
               <a href="" class="btn btn--cyan">Custom</a> -->
-
-          <label for="number-of-people">Number of People</label>
-          <p class="warning">Can't be zero</p>
-          <input
-            type="tel"
-            maxlength="2"
-            id="number-of-people"
-            placeholder="0"
-          />
+          <div class="number-of-people-wrapper">
+            <label for="number-of-people">Number of People</label>
+            <p class="warning">Can't be zero</p>
+            <input
+              type="tel"
+              maxlength="2"
+              id="number-of-people"
+              placeholder="0"
+            />
+          </div>
         </div>
         <!-- Input Field ends -->
 
@@ -81,7 +82,7 @@
             <div class="total-amount">$0.00</div>
           </div>
 
-          <a href="" class="btn btn--cyan">RESET</a>
+          <button class="btn btn--cyan reset">RESET</button>
           <!-- Result Field ends -->
         </div>
       </div>
