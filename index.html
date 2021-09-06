@@ -38,7 +38,7 @@
         <!-- Input Field starts -->
         <div class="col-6">
           <label for="bill">Bill</label>
-          <input type="tel" id="bill" placeholder="0" />
+          <input type="tel" id="bill" class="input" placeholder="0" />
 
           <div class="tip-percentage-wrapper">
             <div class="tip-pecentage-title">Select Tip %</div>
@@ -48,15 +48,15 @@
               <button class="btn btn--cyan tip" value="15">15%</button>
               <button class="btn btn--cyan tip" value="25">25%</button>
               <button class="btn btn--cyan tip" value="50">50%</button>
-              <button class="btn btn--cyan tip">Custom</button>
+              <input
+                type="tel"
+                id="custom-tip-percentage"
+                class="input"
+                placeholder="Custom"
+              />
             </div>
           </div>
-          <!-- <a href="" class="btn btn--cyan">5%</a>
-              <a href="" class="btn btn--cyan">10%</a>
-              <a href="" class="btn btn--cyan">15%</a>
-              <a href="" class="btn btn--cyan">25%</a>
-              <a href="" class="btn btn--cyan">50%</a>
-              <a href="" class="btn btn--cyan">Custom</a> -->
+
           <div class="number-of-people-wrapper">
             <label for="number-of-people">Number of People</label>
             <p class="warning">Can't be zero</p>
@@ -64,6 +64,7 @@
               type="tel"
               maxlength="2"
               id="number-of-people"
+              class="input"
               placeholder="0"
             />
           </div>
