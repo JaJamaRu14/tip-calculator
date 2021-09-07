@@ -66,6 +66,10 @@ button.btn--cyan:hover {
   background: #26c0ab;
 }
 
+.app-name {
+  text-align: center;
+}
+
 body {
   background-color: #c5e4e7;
 }
