@@ -2,6 +2,7 @@ const billInput = document.querySelector('#bill');
 const tipBtn = document.querySelectorAll('.tip');
 const customTipInput = document.querySelector('#custom-tip-percentage');
 const numOfPeople = document.querySelector('#number-of-people');
+const warningSign = document.querySelector('.warning');
 const tipAmountDisplay = document.querySelector('.tip-amount');
 const totalAmountDisplay = document.querySelector('.total-amount');
 const resetBtn = document.querySelector('.reset');
@@ -39,7 +40,22 @@ let headCount;
 
 numOfPeople.addEventListener('blur', (event) => {
   headCount = parseInt(numOfPeople.value);
-  calcResult();
+  if (headCount <= 0) {
+    warningSign.classList.remove('hidden');
+  } else {
+    calcResult();
+  }
+});
+
+// Reset input value on focus
+inputs.forEach((input) => {
+  input.addEventListener('focus', function (event) {
+    this.value = '';
+  });
+});
+
+numOfPeople.addEventListener('focus', (event) => {
+  warningSign.classList.add('hidden');
 });
 
 // Reset everything when reset button is clicked
@@ -52,13 +68,7 @@ resetBtn.addEventListener('click', (event) => {
   numOfPeople.value = '';
   tipAmountDisplay.innerHTML = '$0.00';
   totalAmountDisplay.innerHTML = '$0.00';
-});
-
-// Reset input value on focus
-inputs.forEach((input) => {
-  input.addEventListener('focus', function (event) {
-    this.value = '';
-  });
+  warningSign.classList.add('hidden');
 });
 
 // Calculate the results and display them
