@@ -1,3 +1,173 @@
+@import '../utils/_utilities';
+
+body {
+  background-color: $light-gray-cyan;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
 .app-name {
+  position: relative;
+  top: 15%;
   text-align: center;
+}
+
+.container {
+  position: relative;
+  top: 25%;
+  width: 70%;
+  max-width: 850px;
+  background-color: $white;
+  border-radius: 20px;
+}
+
+.input-field {
+  padding: 3.5rem 0 1.5rem 4.5rem;
+
+  label {
+    display: block;
+    color: $dark-gray-cyan;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .input {
+    background-color: $light-gray;
+    border: none;
+    border-radius: 5px;
+    width: 91.5%;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    text-align: right;
+    color: $very-dark-cyan;
+    font-weight: 700;
+    padding: 0 1.5rem;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px $primary-cyan;
+    }
+
+    &::placeholder {
+      color: $dark-gray-cyan;
+    }
+  }
+
+  .bill-input {
+    background-image: url(../../images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 5%;
+  }
+
+  .tip-percentage-wrapper {
+    .tip-pecentage-title {
+      color: $dark-gray-cyan;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .tip-percentage {
+      .input-custom {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.5;
+        position: relative;
+        display: inline-block;
+        text-align: right;
+        vertical-align: middle;
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.8rem;
+        width: 10.5rem;
+        height: 4.5rem;
+
+        &::placeholder {
+          color: $dark-gray-cyan;
+          text-align: center;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+
+  .number-of-people-wrapper {
+    margin-top: 1rem;
+
+    .number-of-people-title {
+      display: inline-block;
+    }
+
+    .number-of-people-input {
+      background-image: url(../../images/icon-person.svg);
+      background-repeat: no-repeat;
+      background-position: 5%;
+    }
+
+    .warning {
+      width: 52%;
+      text-align: right;
+      display: inline-block;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: $orange;
+    }
+
+    .hidden {
+      visibility: hidden;
+    }
+
+    .warning-outline {
+      outline: none;
+      box-shadow: 0 0 0 2px $orange;
+    }
+  }
+}
+
+.result-field {
+  .result-field-wrapper {
+    background-color: $very-dark-cyan;
+    border-radius: 20px;
+    width: 95%;
+    padding: 3rem 3.5rem 2.5rem 3.5rem;
+
+    .tip-amount-wrapper,
+    .total-amount-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .tip-amount-title,
+  .total-amount-title {
+    font-size: 1.6rem;
+    color: $light-gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    span {
+      color: hsla(180, 37%, 97%, 0.527);
+      font-size: 1.2rem;
+      display: block;
+    }
+  }
+
+  .tip-amount,
+  .total-amount {
+    color: $primary-cyan;
+    font-weight: 700;
+    font-size: 4rem;
+  }
+}
+
+.selected-input {
+  outline: none;
+  box-shadow: 0 0 0 2px $primary-cyan;
 }

@@ -31,14 +31,25 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <header class="app-name"><h1>Splitter</h1></header>
+    <header class="app-name">
+      <!-- <h1>
+        Spli<br />
+        tter
+      </h1> -->
+      <img src="./images/logo.svg" alt="tip calculator logo" />
+    </header>
 
     <main class="container">
       <div class="row align-items-center justify-content-center">
         <!-- Input Field starts -->
-        <div class="col-6">
+        <div class="col-6 input-field">
           <label for="bill">Bill</label>
-          <input type="tel" id="bill" class="input" placeholder="0" />
+          <input
+            type="tel"
+            id="bill"
+            class="input bill-input"
+            placeholder="0"
+          />
 
           <div class="tip-percentage-wrapper">
             <div class="tip-pecentage-title">Select Tip %</div>
@@ -51,20 +62,22 @@
               <input
                 type="tel"
                 id="custom-tip-percentage"
-                class="input"
+                class="input input-custom"
                 placeholder="Custom"
               />
             </div>
           </div>
 
           <div class="number-of-people-wrapper">
-            <label for="number-of-people">Number of People</label>
+            <label for="number-of-people" class="number-of-people-title"
+              >Number of People
+            </label>
             <p class="warning hidden">Can't be zero</p>
             <input
               type="tel"
               maxlength="2"
               id="number-of-people"
-              class="input"
+              class="input number-of-people-input"
               placeholder="0"
             />
           </div>
@@ -72,19 +85,23 @@
         <!-- Input Field ends -->
 
         <!-- Result Field starts -->
-        <div class="col-6">
-          <div class="tip-amount-wrapper">
-            <div class="tip-amount-title">Tip Amount <span>/ person</span></div>
-            <div class="tip-amount">$0.00</div>
-          </div>
+        <div class="col-6 result-field">
+          <div class="result-field-wrapper">
+            <div class="tip-amount-wrapper">
+              <div class="tip-amount-title">
+                Tip Amount <span>/ person</span>
+              </div>
+              <div class="tip-amount">$0.00</div>
+            </div>
 
-          <div class="total-amount-wrapper">
-            <div class="total-amount-title">Total <span>/ person</span></div>
-            <div class="total-amount">$0.00</div>
-          </div>
+            <div class="total-amount-wrapper">
+              <div class="total-amount-title">Total <span>/ person</span></div>
+              <div class="total-amount">$0.00</div>
+            </div>
 
-          <button class="btn btn--cyan reset">RESET</button>
-          <!-- Result Field ends -->
+            <button class="btn btn--cyan reset">RESET</button>
+            <!-- Result Field ends -->
+          </div>
         </div>
       </div>
     </main>
