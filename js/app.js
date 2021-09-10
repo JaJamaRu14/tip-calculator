@@ -20,9 +20,21 @@ billInput.addEventListener('blur', (event) => {
 let tipPercentage;
 
 tipBtn.forEach((element) => {
-  element.addEventListener('click', (e) => {
+  element.addEventListener('click', function (e) {
     tipPercentage = parseInt(element.value) / 100;
+    customTipInput.value = '';
+    tipBtn.forEach((btn) => {
+      btn.classList.remove('selected');
+    });
+    this.classList.add('selected');
+    customTipInput.classList.remove('selected-input');
     calcResult();
+  });
+});
+
+customTipInput.addEventListener('click', (e) => {
+  tipBtn.forEach((btn) => {
+    btn.classList.remove('selected');
   });
 });
 
@@ -32,6 +44,7 @@ customTipInput.addEventListener('blur', (event) => {
   } else {
     tipPercentage = parseInt(customTipInput.value) / 100;
   }
+  customTipInput.classList.add('selected-input');
   calcResult();
 });
 
@@ -42,6 +55,7 @@ numOfPeople.addEventListener('blur', (event) => {
   headCount = parseInt(numOfPeople.value);
   if (headCount <= 0) {
     warningSign.classList.remove('hidden');
+    numOfPeople.classList.add('warning-outline');
   } else {
     calcResult();
   }
@@ -56,6 +70,7 @@ inputs.forEach((input) => {
 
 numOfPeople.addEventListener('focus', (event) => {
   warningSign.classList.add('hidden');
+  numOfPeople.classList.remove('warning-outline');
 });
 
 // Reset everything when reset button is clicked
@@ -69,6 +84,12 @@ resetBtn.addEventListener('click', (event) => {
   tipAmountDisplay.innerHTML = '$0.00';
   totalAmountDisplay.innerHTML = '$0.00';
   warningSign.classList.add('hidden');
+  numOfPeople.classList.remove('warning-outline');
+  tipBtn.forEach((btn) => {
+    btn.classList.remove('selected');
+  });
+  customTipInput.classList.remove('selected-input');
+  resetBtn.classList.remove('selected');
 });
 
 // Calculate the results and display them
@@ -80,5 +101,7 @@ const calcResult = () => {
     tipAmountDisplay.innerHTML = `$${Math.floor(tipPerPerson * 100) / 100}`;
     // cent単位で切り上げ
     totalAmountDisplay.innerHTML = `$${Math.ceil(billPerPerson * 100) / 100}`;
+
+    resetBtn.classList.add('selected');
   }
 };
