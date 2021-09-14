@@ -1,4 +1,5 @@
-@import '../utils/utilities';
+@import '../utils/_utilities';
+@import '../mixin/mixin';
 
 button {
   font-family: inherit;
@@ -27,16 +28,22 @@ button {
   margin-bottom: 0.8rem;
   width: 10.5rem;
   height: 4.5rem;
+
+  @include mq(xs) {
+    width: 14.5rem;
+    height: 5.5rem;
+    font-size: 2.5rem;
+  }
 }
 
 .btn--cyan {
   color: $white;
   background-color: $very-dark-cyan;
-}
 
-.btn--cyan:hover {
-  color: $very-dark-cyan;
-  background: $light-cyan;
+  &:hover {
+    color: $very-dark-cyan;
+    background: $light-cyan;
+  }
 }
 
 .tip:focus {
@@ -53,19 +60,20 @@ button {
   display: block;
   margin-top: 10rem;
   width: 100%;
-}
 
-.reset:focus {
   // remove blur focus on reset button when clicked
-  outline: none;
-  box-shadow: none;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  // button click animation
+  &:active {
+    transform: translate(0, 1.5px);
+  }
 }
 
-// button click animation
-.reset:active {
-  transform: translate(0, 1.5px);
-}
-
+// Add this to reset button when all the inputs are inserted
 .selected {
   color: $very-dark-cyan;
   background: $primary-cyan;

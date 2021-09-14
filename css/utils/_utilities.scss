@@ -11,3 +11,25 @@ $light-gray: hsl(189, 41%, 97%);
 $white: hsl(0, 0%, 100%);
 
 $orange: rgb(235, 128, 5);
+
+// breakpoints
+$breakpoints: (
+  'xs': (
+    max-width: 400px,
+  ),
+  'sm': (
+    min-width: 576px,
+  ),
+  'md': (
+    min-width: 768px,
+  ),
+  'lg': (
+    min-width: 992px,
+  ),
+  'xl': (
+    min-width: 1200px,
+  ),
+  'xxl': (
+    min-width: 1400px,
+  ),
+) !default;

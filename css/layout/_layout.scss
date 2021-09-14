@@ -1,16 +1,25 @@
 @import '../utils/_utilities';
+@import '../mixin/_mixin';
 
 body {
   background-color: $light-gray-cyan;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+
+  @include mq(xs) {
+    overflow: unset;
+  }
 }
 
 .app-name {
   position: relative;
   top: 15%;
   text-align: center;
+
+  @include mq(xs) {
+    top: 7%;
+  }
 }
 
 .container {
@@ -20,10 +29,34 @@ body {
   max-width: 850px;
   background-color: $white;
   border-radius: 20px;
+
+  @include mq(xs) {
+    top: 12%;
+    width: 100%;
+  }
+}
+
+.row {
+  box-shadow: 4px 4px 11px -3px rgba(80, 80, 80, 0.41);
+  border-radius: 20px;
+
+  @include mq(xs) {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    box-shadow: none;
+    // 変な marginを削除
+    --bs-gutter-x: 0;
+  }
 }
 
 .input-field {
   padding: 3.5rem 0 1.5rem 4.5rem;
+
+  @include mq(xs) {
+    width: inherit;
+    padding: 2.2rem;
+  }
 
   label {
     display: block;
@@ -45,6 +78,11 @@ body {
     font-weight: 700;
     padding: 0 1.5rem;
 
+    @include mq(xs) {
+      width: 100%;
+      padding: 0.6rem 1.5rem;
+    }
+
     &:focus {
       outline: none;
       box-shadow: 0 0 0 2px $primary-cyan;
@@ -62,6 +100,9 @@ body {
   }
 
   .tip-percentage-wrapper {
+    @include mq(xs) {
+      padding-left: 0.5rem;
+    }
     .tip-pecentage-title {
       color: $dark-gray-cyan;
       font-size: 1.4rem;
@@ -86,6 +127,12 @@ body {
         width: 10.5rem;
         height: 4.5rem;
 
+        @include mq(xs) {
+          width: 14.5rem;
+          height: 5.6rem;
+          font-size: 2.5rem;
+        }
+
         &::placeholder {
           color: $dark-gray-cyan;
           text-align: center;
@@ -97,6 +144,10 @@ body {
 
   .number-of-people-wrapper {
     margin-top: 1rem;
+
+    @include mq(xs) {
+      margin-top: 1.4rem;
+    }
 
     .number-of-people-title {
       display: inline-block;
@@ -116,6 +167,12 @@ body {
       font-weight: 700;
       margin-bottom: 0.5rem;
       color: $orange;
+
+      @include mq(xs) {
+        width: inherit;
+        margin-left: 3.5rem;
+        margin-bottom: 1rem;
+      }
     }
 
     .hidden {
