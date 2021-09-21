@@ -7,7 +7,7 @@ body {
   width: 100vw;
   overflow: hidden;
 
-  @include mq(xs) {
+  @include mq(md) {
     overflow: unset;
   }
 }
@@ -17,7 +17,7 @@ body {
   top: 15%;
   text-align: center;
 
-  @include mq(xs) {
+  @include mq(md) {
     top: 5%;
   }
 }
@@ -30,7 +30,7 @@ body {
   background-color: $white;
   border-radius: 20px;
 
-  @include mq(xs) {
+  @include mq(md) {
     top: 10%;
     width: 100%;
     border-radius: 20px 20px 0 0;
@@ -41,7 +41,7 @@ body {
   box-shadow: 4px 4px 11px -3px rgba(80, 80, 80, 0.41);
   border-radius: 20px;
 
-  @include mq(xs) {
+  @include mq(md) {
     display: flex;
     flex-direction: column;
     width: inherit;
@@ -54,7 +54,7 @@ body {
 .input-field {
   padding: 3.5rem 0 1.5rem 4.5rem;
 
-  @include mq(xs) {
+  @include mq(md) {
     width: inherit;
     padding: 2.2rem;
     padding-bottom: 0;
@@ -80,7 +80,7 @@ body {
     font-weight: 700;
     padding: 0 1.5rem;
 
-    @include mq(xs) {
+    @include mq(md) {
       width: 100%;
       padding: 0.3rem 1.5rem;
       margin-bottom: 2.5rem;
@@ -103,7 +103,7 @@ body {
   }
 
   .tip-percentage-wrapper {
-    @include mq(xs) {
+    @include mq(md) {
       padding-left: 0.5rem;
     }
     .tip-pecentage-title {
@@ -130,7 +130,7 @@ body {
         width: 10.5rem;
         height: 4.5rem;
 
-        @include mq(xs) {
+        @include mq(md) {
           width: 14.5rem;
           height: 4.6rem;
           font-size: 2.2rem;
@@ -148,7 +148,7 @@ body {
   .number-of-people-wrapper {
     margin-top: 1rem;
 
-    @include mq(xs) {
+    @include mq(md) {
       margin-top: 0.4rem;
     }
 
@@ -171,7 +171,7 @@ body {
       margin-bottom: 0.5rem;
       color: $orange;
 
-      @include mq(xs) {
+      @include mq(md) {
         width: inherit;
         margin-left: 3.5rem;
         margin-bottom: 1rem;
@@ -190,7 +190,7 @@ body {
 }
 
 .result-field {
-  @include mq(xs) {
+  @include mq(md) {
     width: 100%;
   }
 
@@ -200,7 +200,7 @@ body {
     width: 95%;
     padding: 3rem 3.5rem 2.5rem 3.5rem;
 
-    @include mq(xs) {
+    @include mq(md) {
       width: 95%;
       margin: 0 auto;
       padding: 2.5rem 2rem 1rem 2rem;
@@ -236,7 +236,7 @@ body {
     font-weight: 700;
     font-size: 4rem;
 
-    @include mq(xs) {
+    @include mq(md) {
       font-size: 3.5rem;
     }
   }

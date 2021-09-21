@@ -94,7 +94,7 @@ button {
   }
 }
 
-@media (min-width: 992px) {
+@media (max-width: 1400px) {
   .reset {
     background-color: rgba(255, 255, 255, 0.075);
     color: #00494d;
@@ -127,7 +127,7 @@ body {
   overflow: hidden;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   body {
     overflow: unset;
   }
@@ -139,7 +139,7 @@ body {
   text-align: center;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .app-name {
     top: 5%;
   }
@@ -154,7 +154,7 @@ body {
   border-radius: 20px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .container {
     top: 10%;
     width: 100%;
@@ -168,7 +168,7 @@ body {
   border-radius: 20px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -188,7 +188,7 @@ body {
   padding: 3.5rem 0 1.5rem 4.5rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .input-field {
     width: inherit;
     padding: 2.2rem;
@@ -217,7 +217,7 @@ body {
   padding: 0 1.5rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .input-field .input {
     width: 100%;
     padding: 0.3rem 1.5rem;
@@ -253,7 +253,7 @@ body {
   background-position: 5%;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .input-field .tip-percentage-wrapper {
     padding-left: 0.5rem;
   }
@@ -283,7 +283,7 @@ body {
   height: 4.5rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .input-field .tip-percentage-wrapper .tip-percentage .input-custom {
     width: 14.5rem;
     height: 4.6rem;
@@ -319,7 +319,7 @@ body {
   margin-top: 1rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .input-field .number-of-people-wrapper {
     margin-top: 0.4rem;
   }
@@ -345,7 +345,7 @@ body {
   color: #eb8005;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .input-field .number-of-people-wrapper .warning {
     width: inherit;
     margin-left: 3.5rem;
@@ -363,7 +363,7 @@ body {
           box-shadow: 0 0 0 2px #eb8005;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .result-field {
     width: 100%;
   }
@@ -376,7 +376,7 @@ body {
   padding: 3rem 3.5rem 2.5rem 3.5rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .result-field .result-field-wrapper {
     width: 95%;
     margin: 0 auto;
@@ -426,7 +426,7 @@ body {
   font-size: 4rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .result-field .tip-amount,
   .result-field .total-amount {
     font-size: 3.5rem;
