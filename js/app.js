@@ -75,6 +75,25 @@ numOfPeople.addEventListener('focus', (event) => {
 
 // Reset everything when reset button is clicked
 resetBtn.addEventListener('click', (event) => {
+  resetAll();
+});
+
+// Calculate the results and display them
+const calcResult = () => {
+  if (billAmount && tipPercentage >= 0 && headCount) {
+    let tipPerPerson = (billAmount * tipPercentage) / headCount;
+    let billPerPerson = (billAmount + billAmount * tipPercentage) / headCount;
+    // cent単位で切り捨て
+    tipAmountDisplay.innerHTML = `$${Math.floor(tipPerPerson * 100) / 100}`;
+    // cent単位で切り上げ
+    totalAmountDisplay.innerHTML = `$${Math.ceil(billPerPerson * 100) / 100}`;
+
+    resetBtn.classList.add('selected');
+  }
+};
+
+// Reset all states
+const resetAll = () => {
   billAmount = 0;
   tipPercentage = 0;
   headCount = 0;
@@ -90,18 +109,4 @@ resetBtn.addEventListener('click', (event) => {
   });
   customTipInput.classList.remove('selected-input');
   resetBtn.classList.remove('selected');
-});
-
-// Calculate the results and display them
-const calcResult = () => {
-  if (billAmount && tipPercentage >= 0 && headCount) {
-    let tipPerPerson = (billAmount * tipPercentage) / headCount;
-    let billPerPerson = (billAmount + billAmount * tipPercentage) / headCount;
-    // cent単位で切り捨て
-    tipAmountDisplay.innerHTML = `$${Math.floor(tipPerPerson * 100) / 100}`;
-    // cent単位で切り上げ
-    totalAmountDisplay.innerHTML = `$${Math.ceil(billPerPerson * 100) / 100}`;
-
-    resetBtn.classList.add('selected');
-  }
 };
